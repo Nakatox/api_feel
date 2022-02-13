@@ -42,7 +42,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
     ],
     itemOperations: [
         'get',
-        'put' => ["security" => "is_granted('ROLE_ADMIN') or object.owner == user"],
+        'put',
         'delete' => ["security" => "is_granted('ROLE_ADMIN') or object.owner == user"],
     ],
     denormalizationContext: ['groups' => ['feel:write']],
